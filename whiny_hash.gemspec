@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.summary     = "A Hash that complains a lot -- used to simplify optional parameters"
   s.email       = "info@provideal.net"
   s.homepage    = "http://github.com/privideal/whiny_hash"
-  s.description = "A Hash that complains a lot -- used to simplify optional parameters"
+  s.description = "A Hash that complains a lot -- used to simplify optional parameters. WhinyHash instances raise errors if unset keys are accessed either directly or by merge."
   s.authors     = ['Peter Horn']
 
   s.files         = `git ls-files`.split("\n")
