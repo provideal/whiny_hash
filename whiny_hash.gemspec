@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "whiny_hash"
-  s.version     = "0.0.1"
+  s.version     = "0.0.2"
   s.platform    = Gem::Platform::RUBY
   s.summary     = "A Hash that complains a lot -- used to simplify optional parameters"
   s.email       = "info@provideal.net"
