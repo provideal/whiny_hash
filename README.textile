@@ -1,6 +1,6 @@
-h1. AngryHash
+h1. WhinyHash
 
-AngryHash is a pretty minimalistic gem that offers a slightly tweaked Hash functionality which is primarily intended for the passing of optional parameters. The behavior differs from normal hashes in the following points:
+WhinyHash is a pretty minimalistic gem that offers a slightly tweaked Hash functionality which is primarily intended for the passing of optional parameters. The behavior differs from normal hashes in the following points:
 
 * reading unset keys results in an error instead of nil
 * setting previously unset keys results in an error
@@ -9,7 +9,7 @@ AngryHash is a pretty minimalistic gem that offers a slightly tweaked Hash funct
 This doesn't sound like a great improvement, but it simplifies coding quite a lot:
 
 <pre>
-  DEFAULTS = AngryHash.new({class: "default_class", id: "default_id", value: 0})
+  DEFAULTS = WhinyHash.new({class: "default_class", id: "default_id", value: 0})
   
   def foo(opts={})
     options = DEFAULTS.merge(opts)
@@ -26,7 +26,7 @@ So you quickly discover
 * usage of undefined options
 * overriding of undefined options
 
-Since we firmly believe in 'indifferent access', AngryHash is derived from ActiveSupport::HashWithIndifferentAccess which is part of <a href="https://github.com/rails/rails/tree/master/activesupport" target="_blank">activesupport</a>.
+Since we firmly believe in 'indifferent access', WhinyHash is derived from ActiveSupport::HashWithIndifferentAccess which is part of <a href="https://github.com/rails/rails/tree/master/activesupport" target="_blank">activesupport</a>.
 
 h2. License
 

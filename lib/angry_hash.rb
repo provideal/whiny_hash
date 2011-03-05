@@ -28,7 +28,7 @@ require "active_support/hash_with_indifferent_access"
 # unset key is set by a merge.
 #
 # This is used to prevent usage of 'wrong' options.
-class AngryHash < ActiveSupport::HashWithIndifferentAccess
+class WhinyHash < ActiveSupport::HashWithIndifferentAccess
   def [](key)
     key?(key) ? super(key) : raise("Accessing unset key '#{key}'.")
   end
@@ -42,7 +42,7 @@ class AngryHash < ActiveSupport::HashWithIndifferentAccess
     other.keys.each do |k| 
       raise "Trying to override unset key '#{k}'." unless key?(k) 
     end
-    AngryHash.new(merge_lidsa(other))
+    WhinyHash.new(merge_lidsa(other))
   end
   
 end

@@ -2,12 +2,12 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
-  s.name        = "angry_hash"
+  s.name        = "whiny_hash"
   s.version     = "0.0.1"
   s.platform    = Gem::Platform::RUBY
   s.summary     = "A Hash that complains a lot -- used to simplify optional parameters"
   s.email       = "info@provideal.net"
-  s.homepage    = "http://github.com/privideal/angry_hash"
+  s.homepage    = "http://github.com/privideal/whiny_hash"
   s.description = "A Hash that complains a lot -- used to simplify optional parameters"
   s.authors     = ['Peter Horn']
 
