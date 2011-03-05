@@ -9,7 +9,7 @@ AngryHash is a pretty minimalistic gem that offers a slightly tweaked Hash funct
 This doesn't sound like a great improvement, but it simplifies coding quite a lot:
 
 <pre>
-  DEFAULTS = AngryHash({class: "default_class", id: "default_id", value: 0})
+  DEFAULTS = AngryHash.new({class: "default_class", id: "default_id", value: 0})
   
   def foo(opts={})
     options = DEFAULTS.merge(opts)

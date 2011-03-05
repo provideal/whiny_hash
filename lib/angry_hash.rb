@@ -30,13 +30,17 @@ require "active_support/hash_with_indifferent_access"
 # This is used to prevent usage of 'wrong' options.
 class AngryHash < ActiveSupport::HashWithIndifferentAccess
   def [](key)
-    key?(key) ? super(key) : raise("No such key #{key}.")
+    key?(key) ? super(key) : raise("Accessing unset key '#{key}'.")
+  end
+  
+  def []=(key, val)
+    key?(key) ? super(key, val) : raise("Trying to set previously unset key '#{key}'.")
   end
   
   alias_method :merge_lidsa, :merge
   def merge(other)
     other.keys.each do |k| 
-      raise "Overriding unset key #{k}." unless key?(k) 
+      raise "Trying to override unset key '#{k}'." unless key?(k) 
     end
     AngryHash.new(merge_lidsa(other))
   end
